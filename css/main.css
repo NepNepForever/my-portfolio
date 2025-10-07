@@ -95,6 +95,30 @@ body, html {
     color: #44A0FF;
 }
 
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-button.prev {
+    left: 10px;
+}
+.slider-button.next {
+    right: 10px;
+}
+
+.slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .logo{
     margin-top: 5px;
     margin-right: 10px;
@@ -213,6 +237,8 @@ body, html {
     height: 70px;
     width: 300px;
     font-weight: bold;
+    color: #fff;
+    padding: 30px;  
 }
 .catalog__button a{
     color: #fff;
@@ -221,6 +247,7 @@ body, html {
 .catalog__button:hover{
     border: 3px solid #44A0FF;
     background-color: #fff;
+    color: #44A0FF;
     transition: background 0.5s ease, color 0.25s ease;
 }
 .catalog__button a:hover{
@@ -285,40 +312,92 @@ body, html {
 .comment {
     margin-top: 100px;
     background-color: #ecf5ff;
-    height: 600px;
+    height: auto;
+    padding: 40px 0;
+    position: relative;
 }
+
 .comment__title {
     font-size: 50px;
     text-align: center;
-    margin-bottom: 90px;
+    margin-bottom: 40px;
     font-weight: bold;
     color: #2f2f2f;
-    padding-top: 40px;
 }
-.comment__list {
+
+.comment-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
+
+.comment-slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.comment-slider-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .comment__list-item {
     text-align: center;
     background-color: #fff;
     width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
+
 .comment__name {
     font-size: 25px;
     color: #2f2f2f;
     font-weight: bold;
     padding-top: 35px;
 }
+
 .comment__company {
     font-size: 20px;
     color: gray;
     margin: 10px 20px 20px 20px;
 }
+
 .comment__text {
     font-size: 22px;
     text-align: center;
-    padding: 0px 40px 40px 40px;
+    padding: 0 40px 40px 40px;
+}
+
+.comment-slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.comment-slider-button.prev {
+    left: 10px;
+}
+
+.comment-slider-button.next {
+    right: 10px;
+}
+
+.comment-slider-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 .about {
     margin-top: 100px;
@@ -418,12 +497,12 @@ body, html {
     background-color: #fefefe;
     margin: 15% auto; /* Центрировать модальное окно */
     padding: 20px;
-    border: 1px solid #888;
     width: 80%; /* Ширина модального окна */
     max-width: 400px;
     border: 3px solid #44A0FF;
     border-radius: 30px;
 }
+
 
 .close {
     color: #aaa;
@@ -485,6 +564,34 @@ button[type="submit"]:hover {
     font-size: 20px;
     text-align: center;
     margin-top: 20px;
+}
+input[type="number"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 22px);
+}
+
+button[type="button"] {
+    padding: 10px;
+    background-color: #44A0FF;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="button"]:hover {
+    background-color: #357ABD;
+}
+
+#calcResult {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
 }
 .footer {
     margin-top: 100px;

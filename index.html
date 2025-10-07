@@ -51,7 +51,12 @@
                     <button id="openModalBtn">Оставить заявку</button>
                 </a>
             </div>
+            <button class="slider-button prev" id="prevSlide">&lt;</button>
+            <button class="slider-button next" id="nextSlide">&gt;</button>
         </section>
+    
+        <!-- Existing content -->
+        <script src="./js/slider.js"></script>
         
         <!--Инфо в цифрах-->
         <section class="cards">
@@ -102,29 +107,23 @@
                     <div class="catalog__list-item">
                         <img src="./img/7.png" alt="Дом 'Династия'" class="catalog__photo">
                         <div class="catalog__name">Проект "Династия"</div>
-                        <div class="catalog__description">Этажей: Двухэтажный<br>Площадь: 899 м2<br>Количество спален: 5</div>
-                        <div class="catalog__price">От 4 600 000 руб.</div>
-                        <div class="catalog__button">
-                            <a href="#">Рассчитать стоимость</a>
-                        </div>
+                        <div class="catalog__description">Этажей: Двухэтажный<br>Площадь: 176 м2<br>Количество спален: 5</div>
+                        <div class="catalog__price">От 14 100 000 руб.</div>
+                            <button class="catalog__button calc-btn" data-btn-id="1">Рассчитать стоимость</button>
                     </div>
                     <div class="catalog__list-item">
                         <img src="./img/8.png" alt="Дом 'Монтевиль'" class="catalog__photo">
                         <div class="catalog__name">Проект "Монтевиль"</div>
                         <div class="catalog__description">Этажей: Двухэтажный<br>Площадь: 176 м2<br>Количество спален: 4</div>
-                        <div class="catalog__price">От 2 710 000 руб.</div>
-                        <div class="catalog__button">
-                            <a href="#">Рассчитать стоимость</a>
-                        </div>
+                        <div class="catalog__price">От 12 710 000 руб.</div>
+                            <button class="catalog__button calc-btn" data-btn-id="2">Рассчитать стоимость</button>
                     </div>
                     <div class="catalog__list-item">
                         <img src="./img/9.png" alt="Дом 'Премьер'" class="catalog__photo">
                         <div class="catalog__name">Проект "Премьер"</div>
                         <div class="catalog__description">Этажей: Двухэтажный<br>Площадь: 176 м2<br>Количество спален: 4</div>
-                        <div class="catalog__price">От 3 690 000 руб.</div>
-                        <div class="catalog__button">
-                            <a href="#">Рассчитать стоимость</a>
-                        </div>
+                        <div class="catalog__price">От 13 690 000 руб.</div>
+                            <button class="catalog__button calc-btn" data-btn-id="3">Рассчитать стоимость</button>
                     </div>
                 </div>
             </div>
@@ -176,30 +175,39 @@
         <!--Готовые проекты-->
         
 
-        <!--Отзывы-->
         <section class="comment">
-            <a name="comment"></a>
-            <div class="container">
-                <h2 class="comment__title">Отзывы наших клиентов</h2>
-                <div class="comment__list">
-                    <div class="comment__list-item">
-                        <p class="comment__name">Даниил Костомаров</p>
+            <h2 class="comment__title">Отзывы наших клиентов</h2>
+            <div class="comment-slider">
+                <div class="comment-slider-wrapper">
+                    <div class="comment-slider-item">
+                        <div class="comment__list-item">
+                            <p class="comment__name">Даниил Костомаров</p>
                         <p class="comment__company">Компания</p>
-                        <p class="comment__text">Ребята, вы вообще молодцы и реально профессионалы! Хочу искренне поблагодарить Виктора, который проектировал, учесть столько мелочей … это действительно супер!</p>
+                        <p class="comment__text">Ребята, вы вообще молодцы и реально профессионалы! Хочу искренне поблагодарить Александра, который проектировал, учесть столько мелочей … это действительно супер!</p>
+                        </div>
                     </div>
-                    <div class="comment__list-item">
-                        <p class="comment__name">Екатерина Мишина</p>
+                    <div class="comment-slider-item">
+                        <div class="comment__list-item">
+                            <p class="comment__name">Екатерина Мишина</p>
                         <p class="comment__company">Компания</p>
                         <p class="comment__text">Заказывала в этой компании строительство дома. Порадовали сроки, потом еще бонусы всякие получала. Хорошо, что доставка строительных материалов бесплатная!</p>
+                        </div>
                     </div>
-                    <div class="comment__list-item">
-                        <p class="comment__name">Илья Чупринин</p>
+                    <div class="comment-slider-item">
+                        <div class="comment__list-item">
+                            <p class="comment__name">Илья Чупринин</p>
                         <p class="comment__company">Компания</p>
                         <p class="comment__text">Заказывал в этой компании коттедж. Оформил в ипотеку, уж очень порадовали сроки и качество. Вот только вчера заехали с семьей в новый дом.<br> Все нравится!</p>
+                        </div>
                     </div>
                 </div>
+                <button class="comment-slider-button prev" id="prevComment">&lt;</button>
+                <button class="comment-slider-button next" id="nextComment">&gt;</button>
             </div>
         </section>
+    
+        <!-- Подключение скрипта слайдера -->
+        <script src="./js/commentSlider.js"></script>
 
         <!--Остались вопросы?-->
         <section class="question">
@@ -235,7 +243,7 @@
         </section>
     </main>
 
-    <div id="myModal" class="modal">
+        <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <!-- Логотип -->
@@ -256,6 +264,27 @@
                 <div id="successMessage" class="hidden">Отправлено!</div>
             </div>
         </div>
+            
+        <div id="calcModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeCalcModal">&times;</span>
+                <h2>Калькулятор стоимости<br></h2>
+                <form id="calcForm">
+                    <label for="area">Площадь (м²):</label>
+                    <input type="number" id="area" name="area" required>
+    
+                    <label for="pricePerSqm">Цена за м² (руб):</label>
+                    <input type="number" id="pricePerSqm" name="pricePerSqm" value="10000" readonly>
+    
+                    <button type="button" id="calculateBtn">Рассчитать</button>
+                </form>
+                <p id="calcResult"></p>
+            </div>
+        </div>
+
+            <!-- Подключение скрипта калькулятора -->
+        <script src="./js/calculator.js"></script>
+
         <script src="./js/scripts.js"></script>
 
     <!--Подвал-->
